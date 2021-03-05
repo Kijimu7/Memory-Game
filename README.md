@@ -2,11 +2,11 @@
 
 **Memory Game** is a Light & Sound Memory game to apply for CodePath's SITE Program. 
 
-Submitted by: **NAME**
+Submitted by: **Saori Hunziker**
 
-Time spent: **#** hours spent in total
+Time spent: **5** hours spent in total
 
-Link to project: (insert your link here, should start with https://glitch.com...)
+Link to project: (insert your link here, should start with https://battle-possible-suggestion.glitch.me)
 
 ## Required Functionality
 
@@ -47,7 +47,7 @@ Here's a walkthrough of implemented user stories:
 [StackOverFlow, W3c Markup Validation, W3Schools, Glitch Support Center]
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[I]
+ The guess function did not responding to consolelog. I have console.log setted up in the method but didn't get output from Inspector. I checked the html button tags first but I couldn't find the error. Howerver, I found the typo when I used the W3C Markup Validation. I typed onlick instead of onclick. It worked perfectly after I fixed bug. 
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
 [YOUR ANSWER HERE]
