@@ -37,7 +37,8 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![](your-link-here)
+![](https://github.com/Kijimu7/Memory-Game/blob/main/memorygame1.gif)
+![](https://github.com/Kijimu7/Memory-Game/blob/main/memorygame.gif)
 
 
 ## Reflection Questions
