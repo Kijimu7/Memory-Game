@@ -43,8 +43,10 @@ Here's a walkthrough of implemented user stories:
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-*StackOverFlow
-*W3c Markup Validation
+
+
+* StackOverFlow
+* W3c Markup Validation
 [StackOverFlow, W3c Markup Validation, W3Schools, Glitch Support Center]
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
