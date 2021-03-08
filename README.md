@@ -44,12 +44,16 @@ Here's a walkthrough of implemented user stories:
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 
-
 * StackOverFlow
 * W3c Markup Validation
-[StackOverFlow, W3c Markup Validation, W3Schools, Glitch Support Center]
+* W3Schools
+* Glitch Support Center
+* CSS colors
+* Medium
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
+
+
 [I encountered the error that the guess function did not respond to the console log. I have console.log set up in the guess function but did not get output from Inspector under the console. I knew that the button works because it outputs sound and lit colors when I clicked the buttons. Also, it outputs a different message with other function’s console.log to the inspector under Console. So, I assumed there is an error with the attribute on HTML button tags or guess function. I reviewed the JavaScript code and the HTML button tags first to see if I have some spelling miss or wrong implementation, but I couldn't find any errors. I used JavaScript validation to know if I did something wrong with the code next, but I did not find the error. Next, I found the typo when I used the W3C Markup Validation. I got an error warning that says, “Attribute onlick not allowed on element button at this point”. So, I did go StackOverflow, and then I found out the I might have typos. I rechecked my HTML button tags, and I found out I typed onlick instead of onclick. The function worked after I fixed the bug. It output the console.log message and logic also worked.]
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
