@@ -5,25 +5,72 @@ body {
   margin: 2em;
   background-color:slategrey;
   color: white;
+  	background-color: #222;
     
 }
 
+
+
 h1 {
-  font-style: italic;
-  font-family: verdana, arial, sans-serif; 
+  fonto-family: Arial, sans-serif;
+  font-size: 100px;
+ 	color: rgba(0,0,0,0,0.6);
+  text-shadow: 3px 3px 3px rgba(255,255,153,0.5);
+		
+}
   
+p{
+  font-family: Arial, san-serif;
+  font-size: 30px;
+}
  
 }
 
 button{
    padding: 10px;
   border-radius: 10px;
+
 }
+
+
+
+#timerDisp{
+    width: 300px;
+  height: 100px;
+  box-sizing: border-box;
+background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 3%, rgba(45,253,244,1) 100%);
+    margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  display: flex;
+  margin-left: 15%; 
+
+}
+
+#startBtn, #stopBtn{
+  background-color: #FF7F50;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 70px;
+  height:70px;
+  border-radius: 100%; 
+  float:left;
+}
+
+
 
 #gameButtonArea > button{
   width:200px;
   height: 200px;
   margin:5px;
+  margin-top: 50px;
   
 }
 
@@ -31,17 +78,24 @@ button{
   display: none;
 }
 
+#button1, #button2, #button3, #button4, #button5, #button6{
+  border-radius:10%;  
+}
+
 #button1{
-  background: lightgreen;
+  background: lightgreen url(https://plagiarismtoday.com/wp-content/uploads/2018/04/Twemoji_1f61c.svg_-250x250.png);
+  background-repeat: no-repeat;
+
 }
 
 #button1:active, #button1.lit{
-  background: green;
+   background: green;
 }
 
 
 #button2{
-  background: lightblue;
+  background: lightblue url(https://www.transparentpng.com/thumb/sunglasses-emoji/T5814w-sunglasses-emoji-transparent.png);
+  background-repeat: no-repeat;
 }
 #button2:active, #button2.lit{
   background: blue;
@@ -49,7 +103,9 @@ button{
 
 
 #button3{
-  background: pink;
+ 
+    background: pink url(https://images.vexels.com/media/users/3/223218/isolated/lists/cb1f691a4ab49f5ae2fc31071eb3d040-in-love-emoji-icon.png);
+  background-repeat: no-repeat;
 }
 #button3:active, #button3.lit{
   background: red;
@@ -58,8 +114,28 @@ button{
 
 
 #button4{
-  background: lightyellow;
+    background: lightyellow url(https://images.vexels.com/media/users/3/223241/isolated/lists/1c99826e2f69c802555032c6954bc2ed-laughing-emoji-icon.png);
+  background-repeat: no-repeat;
 }
 #button4:active, #button4.lit{
   background: yellow;
+}
+
+#button5{
+
+    background:  	mediumpurple url(https://www.transparentpng.com/thumb/laughing-emoji/laughing-emoji-free-download-transparent-24.png);
+  background-repeat: no-repeat;
+}
+#button5:active, #button5.lit{
+  background: #8B008B;
+}
+
+#button6{
+  background: #F4A460 url(https://img2.pngio.com/face-with-raised-eyebrow-icon-noto-emoji-smileys-iconset-google-raised-eyebrow-emoticon-png-256_256.png);
+   background-repeat: no-repeat;
+  
+  
+}
+#button6:active, #button6.lit{
+  background: #A0522D;
 }

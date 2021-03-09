@@ -2,17 +2,41 @@
     to your site with Javascript */
 
 //global constants
-const clueHoldTime = 1000;
+// const clueHoldTime = 500;
 const cluePauseTime = 333;
 const nextClueWaitTime = 1000;
 
 //Global variables
-var pattern = [2,2,4,3,2,1,2,4];
+var pattern = [2,5,4,3,6,1,2,4];
 var progress = 0;
 var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5;
 var guessCounter = 0;
+var clueHoldTime = 500;
+var mistakes = 0;
+var count = 180;
+var timerCD = null;
+var duration = 50000;
+// var counter=setInterval(timer, 1000);
+
+function timer(){
+  document.getElementById("timerDisp").innerHTML = "Time: " + duration/1000 + " Sec";
+  if(gamePlaying)
+    {
+      if(duration <= -1000)
+    {
+    clearInterval(timerCD);
+      loseGame();
+}else{
+  duration -=1000;
+    }
+   }
+}
+function countDown(){
+  timerCD = setInterval(timer, 1000);
+}
+
 
 
 function lightButton(btn){
@@ -27,8 +51,24 @@ function playSingleClue(btn){
     lightButton(btn);
     playTone(btn,clueHoldTime);
     setTimeout(clearButton,clueHoldTime,btn);
+    clearInterval(timerCD);
+    
   }
 }
+
+function startGame(){
+  //initialize game variables
+  progress = 0;
+  mistakes = 0;
+  gamePlaying = true;
+  duration = 50000;
+  document.getElementById("startBtn").classList.add("hidden");
+  document.getElementById("stopBtn").classList.remove("hidden");
+  playClueSequence();
+  
+
+}
+
 
 function playClueSequence(){
   //set delay to initial wait time
@@ -39,19 +79,12 @@ function playClueSequence(){
     setTimeout(playSingleClue, delay,pattern[i]);
     delay += clueHoldTime;
     delay += cluePauseTime;
-    
+     setTimeout(countDown, delay);
   }
+  clueHoldTime -= 50;
 }
 
 
-function startGame(){
-  //initialize game variables
-  progress = 0;
-  gamePlaying = true;
-  document.getElementById("startBtn").classList.add("hidden");
-  document.getElementById("stopBtn").classList.remove("hidden");
-  playClueSequence();
-}
 
 function stopGame(){
   gamePlaying = false;
@@ -61,13 +94,13 @@ function stopGame(){
 }
 
 function guess(btn){
-  console.log("test")
   console.log("user guessed: " + btn);
   if(!gamePlaying){
     return;
       }
-
   
+  
+    
    if(pattern[guessCounter] == btn){
     if(guessCounter == progress){
     if(progress == pattern.length - 1){
@@ -80,15 +113,19 @@ function guess(btn){
   }else{
     guessCounter++;
   }
+     
 }else{
+  mistakes++;
+ 
+}
+  if (mistakes >= 3)
+  {
   loseGame();
 }
+ 
 }
+
     
-
-
-
-
 
 
 
@@ -106,10 +143,12 @@ function winGame(){
 
 // Sound Synthesis Functions
 const freqMap = {
-  1: 261.6,
-  2: 329.6,
-  3: 392,
-  4: 466.2
+  1: 300.6,
+  2: 200.6,
+  3: 350,
+  4: 180.2,
+  5: 218,
+  6: 366
 }
 
 //sound library
